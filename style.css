@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Lora, sans-serif;
 }
 
 body {
@@ -13,6 +14,8 @@ body {
     padding-bottom: 20px;
     text-align: center;
     color: white;
+    font-family: Neonderthaw, sans-serif;
+    font-size: 4em;
 }
 
 #main {
@@ -34,9 +37,10 @@ body {
 }
 
 #img-caption {
-    font-size: 12px;
+    font-size: 1em;
     color: grey;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #tribute-info {
@@ -44,13 +48,17 @@ body {
     margin-bottom: 20px;
 }
 
+#tribute-info ul {
+    padding-left: 20px;
+}
+
 aside {
     width: 50%;
     background-color: white;
     padding: 5px;
-    display: inline-block;
     margin-bottom: 20px;
     border: indianred dashed 2px;
+    float: left;
 }
 
 aside p {
@@ -59,8 +67,9 @@ aside p {
 }
 
 .after-aside {
-    display: inline-block;
     width: 50%;
+    float: left;
+    padding: 10px;
 }
 
 #tribute-info li {
@@ -70,6 +79,8 @@ aside p {
 #tribute-link {
     margin-top: 10px;
     display: block;
+    clear: left;
+    text-align: center;
 }
 
 footer {
@@ -78,4 +89,29 @@ footer {
     margin-top: 50px;
     text-align: center;
     padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+    aside, .after-aside {
+        width: unset;
+        clear: left;
+    }
+
+    #image {
+        width: 80%;
+    }
+
+    #img-caption {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    aside, .after-aside {
+        padding: 15px;
+    }
+
+    #image {
+        width: 65%;
+    }
 }
